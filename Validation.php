@@ -35,7 +35,7 @@ class Validation
      */
     public static function econet($input, $required = true)
     {
-        return self::validator($input, $required, "/^(((\+)*263)|0)7(7|8)[0-9]{7}$/");
+        return self::validator($input, $required, "/^(((\+)*2637)|07|7)(7|8)[0-9]{7}$/");
     }
 
     /**
@@ -46,7 +46,7 @@ class Validation
      */
     public static function telecel($input, $required = true)
     {
-        return self::validator($input, $required, "/^(((\+)*263)|0)71[0-9]{7}$/");
+        return self::validator($input, $required, "/^(((\+)*2637)|07|7)1[0-9]{7}$/");
     }
 
     /**
@@ -57,7 +57,7 @@ class Validation
      */
     public static function netone($input, $required = true)
     {
-        return self::validator($input, $required, "/^(((\+)*263)|0)73[0-9]{7}$/");
+        return self::validator($input, $required, "/^(((\+)*2637)|07|7|)3[0-9]{7}$/");
     }
 
     /**

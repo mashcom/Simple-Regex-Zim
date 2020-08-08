@@ -12,6 +12,8 @@ final class ValidationTest extends TestCase
         "0776230034",
         "263776230034",
         "+263776230034",
+        "776230034",
+        "776230034",
     );
 
     private $telecel_numbers = array(
