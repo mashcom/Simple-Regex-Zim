@@ -20,11 +20,13 @@ final class ValidationTest extends TestCase
         "0713230034",
         "263713230034",
         "+263713230034",
+        "713230034",
     );
     private $netone_numbers = array(
         "0733230034",
         "263733230034",
         "+263733230034",
+        "733230034",
     );
 
     private $national_ids = array(
@@ -33,6 +35,7 @@ final class ValidationTest extends TestCase
         "672331656-G04",
         "672331656-G-04",
         "672331656G-04",
+        "67331656G-04",
     );
 
 
