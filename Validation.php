@@ -1,6 +1,7 @@
 <?php
 
 namespace Mashcom\Zimbabwean;
+
 /**
  * A simple regex library to validate Zimbabwean data
  * Class Validation
@@ -66,7 +67,7 @@ class Validation
      * @param $required
      * @return bool|false
      */
-    public static function nationalIdNumber($input, $required=true)
+    public static function nationalIdNumber($input, $required = true)
     {
         $input = trim($input);
         $prepared_input = preg_replace("^\\s^", "", $input);
@@ -115,5 +116,16 @@ class Validation
     public static function socialSecurityNumber($input, $required = true)
     {
         return self::validator($input, $required, "/^\b([0-9]){7}([a-zA-Z]){1}\b/");
+    }
+
+    /**
+     * Check if input is a valid Zimbabwean domain
+     * @param $input
+     * @param bool $required
+     * @return bool|false
+     */
+    public static function domainName($input, $required = true)
+    {
+        return self::validator($input, $required, "[^(?!:\/\/)([a-zA-Z0-9-_]+\.)*[a-zA-Z0-9][a-zA-Z0-9-_]+(\.co\.zw|\.ac\.zw|\.org\.zw)$]");
     }
 }

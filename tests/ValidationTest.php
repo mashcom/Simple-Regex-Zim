@@ -38,6 +38,13 @@ final class ValidationTest extends TestCase
         "67331656G-04",
     );
 
+    private $domains = array(
+        "mashcom.co.zw",
+        "mashcom.ac.zw",
+        "mashcom.org.zw",
+        "hello.mashcom.co.zw"
+    );
+
 
     public function testEconetNumberInputs()
     {
@@ -71,6 +78,13 @@ final class ValidationTest extends TestCase
     public function testNationalIdNumber(){
         foreach ($this->national_ids as $input) {
             $this->assertTrue(Validation::nationalIdNumber($input), "Failed National Id Number: $input");
+        }
+    }
+
+    public function testDomainName()
+    {
+        foreach ($this->domains as $input) {
+            $this->assertTrue(Validation::domainName($input), "Failed Domain Number: $input");
         }
     }
 }
