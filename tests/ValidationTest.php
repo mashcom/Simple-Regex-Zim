@@ -1,7 +1,7 @@
 <?php
 
 require_once "../vendor/autoload.php";
-require_once "../Validation.php";
+require_once "../src/Validation.php";
 
 use PHPUnit\Framework\TestCase;
 use \Mashcom\Zimbabwean\Validation;
